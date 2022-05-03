@@ -11,6 +11,6 @@
   position: relative;
   font-size: 3rem;
   letter-spacing: 0.2rem;
-  color: var(--secondary);
+  /* color: var(--secondary); */
+  color: white;
 }
-

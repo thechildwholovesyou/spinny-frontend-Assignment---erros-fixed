@@ -22,12 +22,13 @@
 
 .anime-img {
   width: 100%;
-  height: 23rem;
-  object-fit: cover;
+  height: 20rem;
+  object-fit: contain;
 }
 
 .anime-title {
   padding: 1rem 0.5rem;
   color: yellow;
   font-size: 0.9rem;
+  justify-content: center;
 }

@@ -4,6 +4,7 @@ import "../styles/Anime.css";
 import Anime from "./Anime";
 import Footer from "./Footer";
 import Loading from "./Loading";
+import Header from "./Header";
 
 import {
   updateAnimes,
@@ -23,13 +24,22 @@ const AnimeList = () => {
   let currPage = useSelector((state) => state.currPage);
   let load = useSelector((state) => state.loadCheck);
   let err = useSelector((state) => state.error);
-  console.log(currPage);
+  
 
   const fetchAnimes = async () => {
-    if (currSearch == undefined || currSearch.length == 0) {
-      toast("Please search Your favourite Animes");
-      return;
-    }
+    
+    
+      if(currPage==1 && currSearch.length==0)
+      {
+        toast.error("Empty List ! Please enter something!");
+        return;
+      }
+      if(currSearch == undefined || currSearch.length == 0)
+      {
+        toast("Please search Your favourite Animes");
+        return;
+      }
+    
     const response = await fetch(
       `https://api.jikan.moe/v3/search/anime?q=${currSearch}&limit=16&page=${currPage}`
     ).catch((err) => {
@@ -57,7 +67,9 @@ const AnimeList = () => {
 
     dispatch(updateAnimes(data.results));
     dispatch(loadCheck(false));
+    
   };
+
 
   let dispatch = useDispatch();
   useEffect(() => {
@@ -74,6 +86,7 @@ const AnimeList = () => {
 
   return (
     <div>
+      <Header />
       {currSearch.length == 0 || err || load ? (
         <Loading />
       ) : (

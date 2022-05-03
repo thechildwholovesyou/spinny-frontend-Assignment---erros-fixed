@@ -1,5 +1,6 @@
 import React from "react";
 
+import "../styles/Anime.css";
 const Anime = (props) => {
   let image_url = props.image_url;
   let title = props.title;

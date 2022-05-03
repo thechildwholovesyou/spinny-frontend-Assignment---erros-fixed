@@ -10,6 +10,7 @@ import {
   loadCheck,
   resetPageNumber,
 } from "../redux/actions";
+
 const SearchBar = () => {
   let [sval, setSval] = useState("");
   let dispatch = useDispatch();
