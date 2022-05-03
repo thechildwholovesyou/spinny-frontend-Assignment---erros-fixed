@@ -51,3 +51,10 @@ export const loadCheck = (v) => {
     payload: v,
   };
 };
+
+
+export const resetPageNumber = (v)=>{
+  return{
+    type: "RESET_PAGES"
+  }
+}

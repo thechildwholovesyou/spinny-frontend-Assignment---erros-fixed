@@ -29,8 +29,8 @@ export const incrementPageReducer = (state = 1, action) => {
   switch (action.type) {
     case "INCREMENT_PAGE_NO":
       return state + 1;
-    case "RESET":
-      return 0;
+    case "RESET_PAGES":
+      return 1;
     default:
       return state;
   }
