@@ -8,6 +8,7 @@ import {
   newAnimes,
   error,
   loadCheck,
+  resetPageNumber,
 } from "../redux/actions";
 const SearchBar = () => {
   let [sval, setSval] = useState("");
@@ -28,6 +29,7 @@ const SearchBar = () => {
         class="btn btn-info"
         onClick={(e) => {
           e.preventDefault();
+          dispatch(resetPageNumber());
           dispatch(error(false));
           dispatch(loadCheck(true));
           dispatch(currentSearch(sval));
