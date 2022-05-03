@@ -1,6 +1,5 @@
 import React from "react";
 
-import "../styles/Anime.css";
 const Anime = (props) => {
   let image_url = props.image_url;
   let title = props.title;
@@ -8,7 +7,7 @@ const Anime = (props) => {
   return (
     <div className="anime-card">
       <img src={image_url} alt={title} className="anime-img" />
-      <h4 className="anime-title">{title}</h4>
+      <p className="anime-title">{title}</p>
     </div>
   );
 };
