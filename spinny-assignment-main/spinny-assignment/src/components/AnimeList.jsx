@@ -68,23 +68,11 @@ const AnimeList = () => {
   useEffect(() => {
     dispatch(loadCheck(true));
     fetchAnimes();
-    //dispatch(loadCheck(false));
   }, [currSearch, currPage]);
-
-  //console.log(animeList);
-
-  // console.log(currSearch);
-  console.log(err);
-  // console.log(load);
 
   return (
     <div>
       <Header />
-      {/* {currSearch.length == 0  || load ? (
-        <Loading />
-      ) : { err ? "" :  } (
-        
-      )} */}
 
       {err ? (
         <Error />
