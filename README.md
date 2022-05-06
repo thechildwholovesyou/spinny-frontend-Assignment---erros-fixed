@@ -5,9 +5,8 @@
 1. React
 2. Redux
 3. React Redux
-4. React Router DOM
 
-### DEPLOYED VERSION : https://spinny-assignment-frontend.herokuapp.com/
+### DEPLOYED VERSION :https://spinny-frontend-assignment.herokuapp.com/
 ### HOW TO RUN THIS PROJECT LOCALLY
 
 STEP 1. Clone This Repository.
