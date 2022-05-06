@@ -24,6 +24,18 @@ const SearchBar = () => {
         onChange={(e) => {
           setSval(e.target.value);
         }}
+        onKeyDown={(e) => {
+          if (e.key == "Enter") {
+            e.preventDefault();
+            dispatch(resetPageNumber());
+            dispatch(error(false));
+            dispatch(loadCheck(true));
+            dispatch(currentSearch(sval));
+            dispatch(newAnimes());
+
+            setSval("");
+          }
+        }}
       />
       <button
         type="button"
